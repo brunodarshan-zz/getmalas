@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getmalas/screens/splash.dart';
+import 'package:getmalas/screens/welcome.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,10 +16,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
 class MyHomePage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return Splash();
-  }
+  Widget build(BuildContext context) => Welcome();
 }
  
