@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:getmalas/components/welcome_card.dart';
 
 class Welcome extends StatefulWidget {
   @override
@@ -47,7 +48,7 @@ class WelcomeState extends State<Welcome> {
 
 
   List<Widget> getCards() {
-   return steps.map((step)=>CardItem(item: step, isActive: (steps.indexOf(step) == cardIndex))).toList();
+   return steps.map((step)=>WelcomeCard(item: step, isActive: (steps.indexOf(step) == cardIndex))).toList();
   }
 
   @override
@@ -107,42 +108,3 @@ class WelcomeState extends State<Welcome> {
   }
 }
 
-class CardItem extends StatelessWidget{
-
-  final item,isActive;
-
-  const CardItem({Key key, this.item, this.isActive}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    final ratio = (isActive) ? 1.6 : 1.8;
-    return Column(
-      children: [
-        Text(item['label'],
-        style: TextStyle(
-          color: Color.fromRGBO(0, 0, 0, 0.4),
-          fontSize: 32.0,
-          fontWeight: FontWeight.w700
-            ),),
-       Expanded(
-         child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Container(
-              margin: EdgeInsets.symmetric(vertical: 10.0),
-              decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(80.0))),
-              child: Card(
-                    child: Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Column(
-                      children: <Widget>[
-                        item['image'],
-                        Text(item['description'])
-                      ],
-                    ),)
-                  ),
-                ),
-       ),
-       ),
-      ]
-    );
-  }
-}
