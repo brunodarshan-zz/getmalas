@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:getmalas/components/shareds/indicator.dart';
 import 'package:getmalas/utils/colors.dart';
+import 'package:getmalas/utils/get_malas_icons_icons.dart';
 import 'package:getmalas/utils/texts.dart';
 
 import 'package:getmalas/components/home/slide_item.dart';
@@ -16,16 +17,22 @@ class HomeScreen extends StatelessWidget {
           ContentLayer()
         ],
       ),
-      bottomNavigationBar: Row(
+      bottomNavigationBar: Flex(
+        direction: Axis.horizontal,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          FlatButton(
-            child: Text('Pesquisar'),
-            onPressed: (){},
-          ),
-          FlatButton.icon(icon: Icon(Icons.shop), label: Container(height: 0.0,), onPressed: (){},),
-          FlatButton.icon(icon: Icon(Icons.access_time), label: Container(height: 0.0,), onPressed: (){},),
-          FlatButton.icon(icon: Icon(Icons.access_time), label: Container(height: 0.0,), onPressed: (){},)
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[ RaisedButton(
+              child: Text('Pesquisar', style: TextStyle(fontSize: 12.0),),
+              color: AppColors.colorDefault,
+              onPressed: (){},
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0)
+              ),
+            ),
+            IconButton(icon: GetMalasIcons.cart, onPressed: (){},),
+            IconButton(icon: GetMalasIcons.mala, onPressed: (){},),
+            IconButton(icon: GetMalasIcons.chat, onPressed: (){},),
+            IconButton(icon: Icons.menu, onPressed: (){},)
         ],
       ),
     );
@@ -132,4 +139,26 @@ class BottomLayer extends StatelessWidget {
     );
   }
 
+}
+
+class IconButton extends StatelessWidget {
+  final IconData icon;
+  final Function onPressed;
+  final color;
+
+  const IconButton({Key key, this.icon, this.onPressed, this.color = null}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: 20.0,
+          maxWidth: 20.0
+        ),
+        child: Icon(icon, color: (color != null) ? color :  Color.fromRGBO(0, 0, 0, 0.5)),
+      ),
+      onTap: onPressed,
+    );
+  }
 }
