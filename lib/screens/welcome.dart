@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getmalas/components/shareds/indicator.dart';
 import 'package:getmalas/components/welcome_card.dart';
+import 'package:getmalas/screens/home.dart';
 import 'package:getmalas/utils/colors.dart';
 import 'package:getmalas/utils/texts.dart';
 
@@ -78,7 +79,7 @@ class WelcomeState extends State<Welcome> {
   indicators(){
     final indicators = List<Widget>.generate(steps.length, (index){
       return Indicator(
-        isActive: (index == cardIndex)
+        isActive: (index == cardIndex), size: 10.0,
       );
     });
     return Row(
@@ -105,16 +106,16 @@ class WelcomeState extends State<Welcome> {
               child: Text('Pular', style: btnStyles,),
               onPressed: (){
                 if (!(cardIndex == steps.length - 1)){
-                  
+                  goToHome(context);  
                 }
               },
             ),
           ),
           FlatButton(
-            child: Text('Próximo >', style: btnStyles,),
+            child: Text((!(cardIndex == steps.length - 1) ? 'Próximo >' : 'Continuar >'), style: btnStyles,),
             onPressed: (){
               if (cardIndex == steps.length - 1) {
-
+                goToHome(context);
               } else {
                 cardsController.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
               }
@@ -122,6 +123,12 @@ class WelcomeState extends State<Welcome> {
           )
         ],
       ),
+    );
+  }
+
+  goToHome(context){
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context)=>HomeScreen())
     );
   }
 }
