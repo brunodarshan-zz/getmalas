@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:getmalas/utils/colors.dart';
 
 class WelcomeCard extends StatelessWidget{
 
