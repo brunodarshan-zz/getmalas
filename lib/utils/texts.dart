@@ -27,3 +27,31 @@ List wellcomeSteps = [
     'description': 'Pronto! Você acaba de ganhar mais espaço em casa! Vamos buscar a mala em seu endereço ou você devolve onde retirou.' 
   }
 ];
+
+List slidesHome = [
+  {
+    'title': 'Quanto custa?',
+    'description': 'Conheça nossos produtos e veja o preço de cada um',
+    'image': SvgPicture.asset('assets/home-card-1.svg')
+  },
+  {
+    'title':'Seguro viagem',
+    'description':'Conhe�a nossas pol�ticas de seguro, para garantir uma viagem tranquila',
+    'image': SvgPicture.asset('assets/home-card-2.svg')
+  },
+  {
+    'title': 'Acessórios',
+    'description': 'As melhores dicas de acessórios para você ter uma viagem incrível',
+    'image': SvgPicture.asset('assets/home-card-3.svg')
+  },
+  {
+    'title':'Dúvidas',
+    'description':'Saiba quais são as dúvidas mais comuns entre nossos clientes',
+    'image': SvgPicture.asset('assets/home-card-4.svg')
+  },
+  {
+    'title': 'Chip de dados',
+    'description': 'Com o chip de dados você se pode se atualizar durante a viagem',
+    'image': SvgPicture.asset('assets/home-card-5.svg')
+  }
+];
