@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:getmalas/components/shareds/indicators.dart';
+import 'package:getmalas/components/shareds/indicator.dart';
 import 'package:getmalas/components/welcome_card.dart';
 import 'package:getmalas/utils/colors.dart';
 import 'package:getmalas/utils/texts.dart';
