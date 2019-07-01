@@ -17,22 +17,26 @@ class HomeScreen extends StatelessWidget {
           ContentLayer()
         ],
       ),
-      bottomNavigationBar: Flex(
-        direction: Axis.horizontal,
+      bottomNavigationBar: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         mainAxisSize: MainAxisSize.min,
-        children: <Widget>[ RaisedButton(
-              child: Text('Pesquisar', style: TextStyle(fontSize: 12.0),),
-              color: AppColors.colorDefault,
-              onPressed: (){},
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0)
-              ),
+        children: <Widget>[ 
+            ConstrainedBox(
+              constraints: BoxConstraints(maxHeight: 30.0),
+              child: RaisedButton(
+                        child: Text('Pesquisar', style: TextStyle(fontSize: 10.0),
+                        ),
+                        color: AppColors.colorDefault,
+                        onPressed: (){},
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0)
+                        ),
+                      ),
             ),
-            IconButton(icon: GetMalasIcons.cart, onPressed: (){},),
-            IconButton(icon: GetMalasIcons.mala, onPressed: (){},),
-            IconButton(icon: GetMalasIcons.chat, onPressed: (){},),
-            IconButton(icon: Icons.menu, onPressed: (){},)
+            IconButton(icon: Icon(GetMalasIcons.cart), color: Color.fromRGBO(0, 0, 0, 0.5), onPressed: (){},),
+            IconButton(icon: Icon(GetMalasIcons.mala), color: Color.fromRGBO(0, 0, 0, 0.5), onPressed: (){},),
+            IconButton(icon: Icon(GetMalasIcons.chat), color: Color.fromRGBO(0, 0, 0, 0.5), onPressed: (){},),
+            IconButton(icon: Icon(Icons.menu), color: Color.fromRGBO(0, 0, 0, 0.5), onPressed: (){},)
         ],
       ),
     );
@@ -139,26 +143,4 @@ class BottomLayer extends StatelessWidget {
     );
   }
 
-}
-
-class IconButton extends StatelessWidget {
-  final IconData icon;
-  final Function onPressed;
-  final color;
-
-  const IconButton({Key key, this.icon, this.onPressed, this.color = null}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      child: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxHeight: 20.0,
-          maxWidth: 20.0
-        ),
-        child: Icon(icon, color: (color != null) ? color :  Color.fromRGBO(0, 0, 0, 0.5)),
-      ),
-      onTap: onPressed,
-    );
-  }
 }
