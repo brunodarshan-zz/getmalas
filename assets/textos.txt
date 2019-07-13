@@ -1,24 +1,24 @@
-/* Bem-vindo ao aplicativo GetMalas. Faremos de tudo para que você guarde só as lembranças felizes do passeio! Arraste para o lado e veja como é simples utilizar nosso serviço. */
-/* Você escolhe o modelo, a cor, faz a reserva e nós preparamos a sua mala. */
-/* Retire a mala com um parceiro ou receba via delivery em seu endereço */
-/* Aproveite o passeio sem dores de cabeça. Em caso de danos ou avarias no aeroporto, nós cuidamos de tudo. */
-/* Pronto! Você acaba de ganhar mais espaço em casa! Vamos buscar a mala em seu endereço ou você devolve onde retirou. */
+/* Bem-vindo ao aplicativo GetMalas. Faremos de tudo para que vocï¿½ guarde sï¿½ as lembranï¿½as felizes do passeio! Arraste para o lado e veja como ï¿½ simples utilizar nosso serviï¿½o. */
+/* Vocï¿½ escolhe o modelo, a cor, faz a reserva e nï¿½s preparamos a sua mala. */
+/* Retire a mala com um parceiro ou receba via delivery em seu endereï¿½o */
+/* Aproveite o passeio sem dores de cabeï¿½a. Em caso de danos ou avarias no aeroporto, nï¿½s cuidamos de tudo. */
+/* Pronto! Vocï¿½ acaba de ganhar mais espaï¿½o em casa! Vamos buscar a mala em seu endereï¿½o ou vocï¿½ devolve onde retirou. */
 
 
 Slide home
 
 Quanto custa?
-/* Conheça nossos produtos e veja o preço de cada um */
+/* Conheï¿½a nossos produtos e veja o preï¿½o de cada um */
 
 Seguro viagem
-/* Conheça nossas políticas de seguro, para garantir uma viagem tranquila */
+/* Conheï¿½a nossas polï¿½ticas de seguro, para garantir uma viagem tranquila */
 
-Acessórios
-/* As melhores dicas de acessórios para você ter uma viagem incrível */
+Acessï¿½rios
+/* As melhores dicas de acessï¿½rios para vocï¿½ ter uma viagem incrï¿½vel */
 
-Dúvidas
-/* Saiba quais são as dúvidas mais comuns entre nossos clientes */
+Dï¿½vidas
+/* Saiba quais sï¿½o as dï¿½vidas mais comuns entre nossos clientes */
 
 Chip de dados
-/* Com o chip de dados você se pode se atualizar durante a viagem */
+/* Com o chip de dados vocï¿½ se pode se atualizar durante a viagem */
 
